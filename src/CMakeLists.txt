@@ -222,6 +222,7 @@ set(libwesnoth-core_STAT_SRC
 	filesystem_common.cpp
 	font/constants.cpp
 	game_config.cpp
+	gettext_boost.cpp
 	hash.cpp
 	log.cpp
 	md5.cpp
@@ -238,18 +239,6 @@ set(libwesnoth-core_STAT_SRC
 	serialization/unicode.cpp
 	serialization/validator.cpp
 )
-
-if(NOT ENABLE_LIBINTL)
-	set(libwesnoth-core_STAT_SRC
-		${libwesnoth-core_STAT_SRC}
-		gettext_boost.cpp
-	)
-else()
-	set(libwesnoth-core_STAT_SRC
-		${libwesnoth-core_STAT_SRC}
-		gettext.cpp
-	)
-endif()
 
 if(WIN32)
 	set(libwesnoth-core_STAT_SRC
