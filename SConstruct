@@ -379,7 +379,7 @@ if env["prereqs"]:
         conf.CheckBoost("smart_ptr", header_only = True) & \
         conf.CheckBoost("system") & \
         conf.CheckBoost("filesystem", require_version = boost_version) & \
-        conf.CheckBoost("locale")() \
+        conf.CheckBoost("locale") \
             and Info("Base prerequisites are met")) \
             or Warning("Base prerequisites are not met")
 
